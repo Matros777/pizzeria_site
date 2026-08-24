@@ -12,7 +12,6 @@
     <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png" />
     <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#0a0806" />
-
     <meta name="description" content="Napoli из печи — итальянская пиццерия. Аутентичные пиццы на тонком тесте, фирменные соусы и быстрая доставка. Закажите вкус Италии уже сегодня!" />
     <link rel="canonical" href="https://pizzeria-site.ivanbenks7-e96.workers.dev/" />
     <meta property="og:type" content="website" />
@@ -25,13 +24,13 @@
     <meta name="twitter:title" content="Napoli из печи — Итальянская пиццерия" />
     <meta name="twitter:description" content="Настоящая итальянская пицца на тонком тесте с доставкой." />
     <meta name="twitter:image" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/og-card.png" />
- 
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
- 
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-     
+
         body {
             font-family: 'Inter', sans-serif;
             background: #0a0806;
@@ -41,7 +40,6 @@
             position: relative;
         }
 
-        /* ===== BACKGROUND ===== */
         .bg-layer {
             position: fixed;
             inset: 0;
@@ -80,8 +78,6 @@
             opacity: 0.035;
             mix-blend-mode: overlay;
         }
-
-        /* Искры */
         .sparks { position: absolute; inset: 0; overflow: hidden; }
         .spark {
             position: absolute;
@@ -108,7 +104,6 @@
             100% { transform: translateY(-110vh) translateX(var(--tx)) scale(0.1); opacity: 0; }
         }
 
-        /* Дымок */
         .smoke { position: absolute; inset: 0; overflow: hidden; opacity: 0.4; }
         .smoke-cloud {
             position: absolute;
@@ -128,14 +123,12 @@
             30% { opacity: 0.5; }
             100% { transform: translateY(-85vh) translateX(40px) scale(1.6); opacity: 0; }
         }
-
         .vignette {
             position: absolute;
             inset: 0;
             background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%);
         }
 
-        /* ===== ПАРАЛЛАКС ===== */
         .parallax-pizzas {
             position: fixed;
             inset: 0;
@@ -158,7 +151,6 @@
         .parallax-pizza.p2 { top: 48%; right: -80px; width: 260px; height: 260px; opacity: 0.15; }
         .parallax-pizza.p3 { top: 75%; left: 5%; width: 240px; height: 240px; opacity: 0.12; }
 
-        /* ===== LAYOUT ===== */
         .container {
             position: relative;
             z-index: 3;
@@ -167,33 +159,29 @@
             padding: 0 24px 80px;
         }
 
-        /* HEADER */
+        /* ===== HEADER — УМЕНЬШЕННАЯ ШАПКА ===== */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 22px 0;
+            padding: 12px 0;
             border-bottom: 1px solid rgba(245, 200, 66, 0.1);
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 10px;
         }
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-        }
-        .logo-icon {
-            display: flex;
-            align-items: center;
+            gap: 10px;
         }
         .logo-icon img {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             object-fit: contain;
             filter: drop-shadow(0 0 12px rgba(245, 200, 66, 0.4));
         }
         .logo-text {
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 800;
             background: linear-gradient(135deg, #f5c842, #e09d1e, #f5c842);
             background-size: 200% auto;
@@ -203,7 +191,7 @@
         }
         @keyframes shine { to { background-position: 200% center; } }
         .logo-sub {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 400;
             color: rgba(245, 240, 235, 0.45);
             letter-spacing: 2px;
@@ -211,13 +199,13 @@
         }
         .nav {
             display: flex;
-            gap: 28px;
+            gap: 20px;
             align-items: center;
         }
         .nav a {
             color: rgba(245, 240, 235, 0.65);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             transition: color 0.3s;
             position: relative;
@@ -235,10 +223,10 @@
         .nav .order-btn {
             background: linear-gradient(135deg, #f5c842, #e09d1e);
             color: #0d0d0d;
-            padding: 10px 24px;
+            padding: 8px 18px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 12px;
             box-shadow: 0 0 25px rgba(245, 200, 66, 0.25);
             border: none;
             transition: all 0.3s;
@@ -251,13 +239,12 @@
         }
         .nav .order-btn::after { display: none; }
 
-        /* ===== HERO ===== */
         .hero {
-            margin: 40px 0 70px;
+            margin: 30px 0 50px;
             position: relative;
             border-radius: 28px;
             overflow: hidden;
-            min-height: 520px;
+            min-height: 420px;
             display: flex;
             align-items: center;
             border: 1px solid rgba(255,255,255,0.07);
@@ -280,9 +267,7 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-        .hero-slide.active {
-            opacity: 1;
-        }
+        .hero-slide.active { opacity: 1; }
         .hero-overlay {
             position: absolute;
             inset: 0;
@@ -295,8 +280,8 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            padding: 60px;
-            max-width: 540px;
+            padding: 40px 50px;
+            max-width: 500px;
         }
         .hero-badge {
             display: inline-flex;
@@ -304,20 +289,20 @@
             gap: 8px;
             background: rgba(245, 200, 66, 0.15);
             border: 1px solid rgba(245, 200, 66, 0.3);
-            padding: 7px 18px;
+            padding: 5px 14px;
             border-radius: 50px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: #f5c842;
             letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
         .hero h1 {
-            font-size: clamp(34px, 5.5vw, 52px);
+            font-size: clamp(30px, 4.5vw, 44px);
             font-weight: 800;
             line-height: 1.12;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
         .hero h1 span {
             background: linear-gradient(135deg, #f5c842, #ffd700);
@@ -325,11 +310,11 @@
             -webkit-text-fill-color: transparent;
         }
         .hero p {
-            font-size: 16px;
+            font-size: 15px;
             color: rgba(245, 240, 235, 0.7);
             line-height: 1.7;
-            margin-bottom: 32px;
-            max-width: 420px;
+            margin-bottom: 24px;
+            max-width: 400px;
         }
         .hero-btn {
             display: inline-flex;
@@ -337,10 +322,10 @@
             gap: 10px;
             background: linear-gradient(135deg, #f5c842, #e09d1e);
             color: #0d0d0d;
-            padding: 14px 32px;
+            padding: 12px 28px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14px;
             text-decoration: none;
             transition: all 0.3s;
             box-shadow: 0 0 30px rgba(245, 200, 66, 0.25);
@@ -351,18 +336,17 @@
             box-shadow: 0 0 45px rgba(245, 200, 66, 0.4);
         }
 
-        /* ===== PROMO ===== */
         .promo-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         .promo-card {
             background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
             border: 1px solid rgba(255,255,255,0.07);
             border-radius: 18px;
-            padding: 28px 24px;
+            padding: 24px 20px;
             transition: all 0.35s;
             position: relative;
             overflow: hidden;
@@ -383,19 +367,19 @@
         }
         .promo-card:hover::before { opacity: 1; }
         .promo-card h3 {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         .promo-card h3 i { color: #f5c842; }
         .promo-card p {
-            font-size: 14px;
+            font-size: 13px;
             color: rgba(245, 240, 235, 0.55);
             line-height: 1.55;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
         .promo-link {
             font-size: 13px;
@@ -409,15 +393,14 @@
         }
         .promo-link:hover { gap: 10px; }
 
-        /* ===== MENU ===== */
         .section-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
         .section-header h2 {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .section-header h2 span {
             background: linear-gradient(135deg, #f5c842, #e09d1e);
@@ -426,13 +409,13 @@
         }
         .section-header p {
             color: rgba(245, 240, 235, 0.5);
-            font-size: 16px;
+            font-size: 15px;
         }
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 24px;
-            margin-bottom: 90px;
+            margin-bottom: 70px;
         }
         .pizza-card {
             background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
@@ -459,9 +442,7 @@
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        .pizza-card:hover .pizza-image img {
-            transform: scale(1.08);
-        }
+        .pizza-card:hover .pizza-image img { transform: scale(1.08); }
         .pizza-image .badge {
             position: absolute;
             top: 12px;
@@ -475,35 +456,26 @@
             letter-spacing: 0.5px;
             z-index: 2;
         }
-        .pizza-body {
-            padding: 20px;
-        }
-        .pizza-name {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        .pizza-desc {
-            font-size: 13px;
-            color: rgba(245, 240, 235, 0.5);
-            line-height: 1.5;
-            margin-bottom: 16px;
-            min-height: 40px;
-        }
+        .pizza-body { padding: 18px; }
+        .pizza-name { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+        .pizza-desc { font-size: 13px; color: rgba(245, 240, 235, 0.5); line-height: 1.5; margin-bottom: 10px; min-height: 36px; }
+        .pizza-weight { font-size: 13px; color: #c9a86a; font-weight: 600; margin-bottom: 10px; }
         .pizza-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .pizza-price {
-            font-size: 22px;
-            font-weight: 800;
-            color: #f5c842;
-        }
-        .pizza-price small {
-            font-size: 13px;
-            font-weight: 500;
-            color: rgba(245, 240, 235, 0.4);
+        .pizza-price { font-size: 22px; font-weight: 800; color: #f5c842; }
+        .pizza-price small { font-size: 13px; font-weight: 500; color: rgba(245, 240, 235, 0.4); }
+        .pizza-ph {
+            width: 100%;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 84px;
+            background: linear-gradient(135deg, #2a1c10, #3a2412);
+            border-radius: 14px 14px 0 0;
         }
         .btn-order {
             background: rgba(245, 200, 66, 0.12);
@@ -522,130 +494,73 @@
             box-shadow: 0 0 20px rgba(245, 200, 66, 0.3);
         }
 
-        /* ===== DELIVERY ===== */
         .delivery-block {
             background: linear-gradient(135deg, rgba(245, 200, 66, 0.08), rgba(180, 100, 20, 0.06));
             border: 1px solid rgba(245, 200, 66, 0.15);
             border-radius: 24px;
-            padding: 50px 40px;
+            padding: 40px 36px;
             display: flex;
             align-items: center;
-            gap: 50px;
-            margin-bottom: 90px;
+            gap: 40px;
+            margin-bottom: 70px;
             flex-wrap: wrap;
         }
         .delivery-info { flex: 1; min-width: 280px; }
-        .delivery-info h2 {
-            font-size: 32px;
-            font-weight: 800;
-            margin-bottom: 14px;
-        }
-        .delivery-info p {
-            color: rgba(245, 240, 235, 0.6);
-            line-height: 1.7;
-            margin-bottom: 24px;
-            font-size: 15px;
-        }
-        .delivery-meta {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-            color: rgba(245, 240, 235, 0.7);
-        }
-        .meta-item i {
-            color: #f5c842;
-            font-size: 18px;
-        }
+        .delivery-info h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+        .delivery-info p { color: rgba(245, 240, 235, 0.6); line-height: 1.7; margin-bottom: 20px; font-size: 15px; }
+        .delivery-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(245, 240, 235, 0.7); }
+        .meta-item i { color: #f5c842; font-size: 18px; }
         .delivery-visual {
-            width: 220px;
-            height: 220px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             overflow: hidden;
             border: 2px solid rgba(245, 200, 66, 0.25);
             flex-shrink: 0;
             box-shadow: 0 0 40px rgba(245, 200, 66, 0.15);
         }
-        .delivery-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .delivery-visual img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* ===== REVIEWS ===== */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 24px;
-            margin-bottom: 90px;
+            margin-bottom: 70px;
         }
         .review-card {
             background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
             border: 1px solid rgba(255,255,255,0.07);
             border-radius: 18px;
-            padding: 28px;
+            padding: 24px;
             transition: all 0.3s;
         }
-        .review-card:hover {
-            border-color: rgba(245, 200, 66, 0.2);
-        }
-        .review-stars {
-            color: #f5c842;
-            font-size: 14px;
-            margin-bottom: 14px;
-            letter-spacing: 2px;
-        }
-        .review-text {
-            font-size: 14px;
-            color: rgba(245, 240, 235, 0.65);
-            line-height: 1.65;
-            margin-bottom: 18px;
-        }
-        .review-author {
-            font-size: 14px;
-            font-weight: 600;
-            color: #f5f0eb;
-        }
-        .review-author span {
-            font-weight: 400;
-            color: rgba(245, 240, 235, 0.4);
-            font-size: 12px;
-        }
+        .review-card:hover { border-color: rgba(245, 200, 66, 0.2); }
+        .review-stars { color: #f5c842; font-size: 14px; margin-bottom: 12px; letter-spacing: 2px; }
+        .review-text { font-size: 14px; color: rgba(245, 240, 235, 0.65); line-height: 1.65; margin-bottom: 14px; }
+        .review-author { font-size: 14px; font-weight: 600; color: #f5f0eb; }
+        .review-author span { font-weight: 400; color: rgba(245, 240, 235, 0.4); font-size: 12px; }
 
-        /* ===== FOOTER + КОСТЁР ===== */
         .footer-wrap {
             position: relative;
-            margin-top: 40px;
-            padding-top: 50px;
+            margin-top: 30px;
+            padding-top: 40px;
             border-top: 1px solid rgba(255,255,255,0.06);
         }
         .footer {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
             color: rgba(245, 240, 235, 0.35);
-            font-size: 14px;
+            font-size: 13px;
             position: relative;
             z-index: 2;
         }
-        .footer-links {
-            display: flex;
-            gap: 24px;
-        }
-        .footer-links a {
-            color: rgba(245, 240, 235, 0.35);
-            font-size: 18px;
-            transition: color 0.3s;
-        }
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a { color: rgba(245, 240, 235, 0.35); font-size: 18px; transition: color 0.3s; }
         .footer-links a:hover { color: #f5c842; }
 
-        /* Мягкий костёр в подвале */
         .campfire {
             position: absolute;
             bottom: -10px;
@@ -664,38 +579,10 @@
             transform-origin: bottom center;
             filter: blur(1px);
         }
-        .flame.f1 {
-            left: 42%;
-            width: 18px;
-            height: 42px;
-            background: radial-gradient(ellipse at bottom, #ff9a2e 0%, #ff6b1a 40%, transparent 70%);
-            animation: flameDance 1.8s ease-in-out infinite alternate;
-        }
-        .flame.f2 {
-            left: 50%;
-            width: 22px;
-            height: 52px;
-            background: radial-gradient(ellipse at bottom, #ffb347 0%, #ff7b25 45%, transparent 75%);
-            animation: flameDance 2.1s ease-in-out infinite alternate-reverse;
-            animation-delay: 0.3s;
-        }
-        .flame.f3 {
-            left: 58%;
-            width: 16px;
-            height: 38px;
-            background: radial-gradient(ellipse at bottom, #ff9a2e 0%, #e85d04 40%, transparent 70%);
-            animation: flameDance 1.6s ease-in-out infinite alternate;
-            animation-delay: 0.6s;
-        }
-        .flame.f4 {
-            left: 46%;
-            width: 12px;
-            height: 28px;
-            background: radial-gradient(ellipse at bottom, #ffcc66 0%, #ff8c1a 50%, transparent 80%);
-            animation: flameDance 2.4s ease-in-out infinite alternate-reverse;
-            animation-delay: 0.2s;
-            opacity: 0.7;
-        }
+        .flame.f1 { left: 42%; width: 18px; height: 42px; background: radial-gradient(ellipse at bottom, #ff9a2e 0%, #ff6b1a 40%, transparent 70%); animation: flameDance 1.8s ease-in-out infinite alternate; }
+        .flame.f2 { left: 50%; width: 22px; height: 52px; background: radial-gradient(ellipse at bottom, #ffb347 0%, #ff7b25 45%, transparent 75%); animation: flameDance 2.1s ease-in-out infinite alternate-reverse; animation-delay: 0.3s; }
+        .flame.f3 { left: 58%; width: 16px; height: 38px; background: radial-gradient(ellipse at bottom, #ff9a2e 0%, #e85d04 40%, transparent 70%); animation: flameDance 1.6s ease-in-out infinite alternate; animation-delay: 0.6s; }
+        .flame.f4 { left: 46%; width: 12px; height: 28px; background: radial-gradient(ellipse at bottom, #ffcc66 0%, #ff8c1a 50%, transparent 80%); animation: flameDance 2.4s ease-in-out infinite alternate-reverse; animation-delay: 0.2s; opacity: 0.7; }
         .ember {
             position: absolute;
             bottom: 8px;
@@ -722,36 +609,28 @@
             100% { transform: translateY(-55px) scale(0.3); opacity: 0; }
         }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
             .promo-row { grid-template-columns: 1fr; }
-            .hero { min-height: 460px; }
-            .hero-content { padding: 40px 30px; }
+            .hero { min-height: 380px; }
+            .hero-content { padding: 30px 24px; }
             .delivery-block { flex-direction: column; text-align: center; }
             .delivery-meta { justify-content: center; }
             .parallax-pizza { opacity: 0.1 !important; }
         }
         @media (max-width: 768px) {
             .header { flex-direction: column; align-items: flex-start; }
-            .nav { flex-wrap: wrap; gap: 14px; width: 100%; }
+            .nav { flex-wrap: wrap; gap: 12px; width: 100%; }
             .parallax-pizzas { display: none; }
         }
         @media (max-width: 480px) {
             .container { padding: 0 16px 60px; }
-            .hero-content { padding: 30px 20px; }
+            .hero-content { padding: 24px 16px; }
             .menu-grid { grid-template-columns: 1fr; }
         }
-        .pizza-card { cursor: pointer; }
-</style>
-        .pizza-ph{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:84px;background:linear-gradient(135deg,#2a1c10,#3a2412);border-radius:14px 14px 0 0;}
-        .pizza-weight{font-size:13px;color:#c9a86a;font-weight:600;margin-bottom:10px;}
-
-        .pizza-ph{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:84px;background:linear-gradient(135deg,#2a1c10,#3a2412);border-radius:14px 14px 0 0;}
-        .pizza-weight{font-size:13px;color:#c9a86a;font-weight:600;margin-bottom:10px;}
-
+    </style>
 </head>
 <body>
-    <!-- BACKGROUND -->
+
     <div class="bg-layer">
         <div class="bg-gradient"></div>
         <div class="glow-orb o1"></div>
@@ -769,7 +648,6 @@
         <div class="vignette"></div>
     </div>
 
-    <!-- ПАРАЛЛАКС -->
     <div class="parallax-pizzas">
         <img src="images/esTuR.jpg" alt="" class="parallax-pizza p1" data-speed="0.15">
         <img src="images/e4xik.jpg" alt="" class="parallax-pizza p2" data-speed="0.25">
@@ -777,10 +655,10 @@
     </div>
 
     <div class="container">
-        <!-- HEADER -->
+
         <header class="header">
             <div class="logo">
-                <span class="logo-icon"><img src="logo.png" alt="Napoli из печи" width="40" height="40" /></span>
+                <span class="logo-icon"><img src="logo.png" alt="Napoli из печи" width="32" height="32" /></span>
                 <div>
                     <div class="logo-text">Napoli из печи</div>
                     <div class="logo-sub">La Cucina Italiana</div>
@@ -794,7 +672,6 @@
             </nav>
         </header>
 
-        <!-- HERO -->
         <section class="hero">
             <div class="hero-slider">
                 <img src="images/pizza1.jpg" class="hero-slide active" alt="Pizza Luxe">
@@ -810,7 +687,6 @@
             </div>
         </section>
 
-        <!-- PROMO -->
         <div class="promo-row">
             <div class="promo-card">
                 <h3><i class="fas fa-clock"></i> Быстрая доставка</h3>
@@ -829,7 +705,6 @@
             </div>
         </div>
 
-        <!-- MENU -->
         <div id="menu">
             <div class="section-header">
                 <h2>Наше <span>меню</span></h2>
@@ -838,7 +713,6 @@
             <div class="menu-grid" id="pizzaGrid"></div>
         </div>
 
-        <!-- DELIVERY -->
         <div class="delivery-block" id="delivery">
             <div class="delivery-info">
                 <h2>Доставка</h2>
@@ -850,11 +724,10 @@
                 </div>
             </div>
             <div class="delivery-visual">
-                <img src="delivery.jpg" alt="Доставка">
+                <img src="images/delivery.jpg" alt="Доставка">
             </div>
         </div>
 
-        <!-- REVIEWS -->
         <div id="reviews">
             <div class="section-header">
                 <h2>Отзывы <span>клиентов</span></h2>
@@ -894,7 +767,6 @@
             </div>
         </div>
 
-        <!-- FOOTER + КОСТЁР -->
         <div class="footer-wrap">
             <div class="campfire">
                 <div class="flame f1"></div>
@@ -917,94 +789,93 @@
     </div>
 
     <script>
-        // Искры
-        const sparksContainer = document.getElementById('sparks');
-        for (let i = 0; i < 38; i++) {
-            const spark = document.createElement('div');
-            spark.className = 'spark';
-            spark.style.left = Math.random() * 100 + '%';
-            spark.style.bottom = (Math.random() * 20 - 5) + '%';
-            spark.style.setProperty('--tx', ((Math.random() - 0.5) * 180) + 'px');
-            spark.style.animationDuration = (4.5 + Math.random() * 7) + 's';
-            spark.style.animationDelay = (Math.random() * 10) + 's';
-            const size = 2.5 + Math.random() * 3.5;
-            spark.style.width = spark.style.height = size + 'px';
-            sparksContainer.appendChild(spark);
-        }
+        (function() {
+            const container = document.getElementById('sparks');
+            for (let i = 0; i < 38; i++) {
+                const el = document.createElement('div');
+                el.className = 'spark';
+                el.style.left = Math.random() * 100 + '%';
+                el.style.bottom = (Math.random() * 20 - 5) + '%';
+                el.style.setProperty('--tx', ((Math.random() - 0.5) * 180) + 'px');
+                el.style.animationDuration = (4.5 + Math.random() * 7) + 's';
+                el.style.animationDelay = (Math.random() * 10) + 's';
+                const s = 2.5 + Math.random() * 3.5;
+                el.style.width = el.style.height = s + 'px';
+                container.appendChild(el);
+            }
+        })();
 
-        // Параллакс
-        const parallaxItems = document.querySelectorAll('.parallax-pizza');
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            parallaxItems.forEach(item => {
-                const speed = parseFloat(item.dataset.speed) || 0.2;
-                item.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.02}deg)`;
+        (function() {
+            const items = document.querySelectorAll('.parallax-pizza');
+            window.addEventListener('scroll', function() {
+                const y = window.pageYOffset;
+                items.forEach(function(el) {
+                    const speed = parseFloat(el.dataset.speed) || 0.2;
+                    el.style.transform = 'translateY(' + (y * speed) + 'px) rotate(' + (y * 0.02) + 'deg)';
+                });
             });
-        });
+        })();
 
-        // Меню — актуальные фото + цены в BYN
-                        const pizzas = [
-            { name: 'Маргарита', desc: 'Томатный соус, моцарелла, базилик, пармезан', weight: '450 г', price: '25', img: '', badge: null, slug: 'margarita', page: 'pizza-margarita.html' },
-            { name: 'Пепперони', desc: 'Томатный соус, моцарелла, пепперони, орегано', weight: '480 г', price: '27', img: '', badge: 'Хит', slug: 'pepperoni', page: 'pizza-pepperoni.html' },
-            { name: 'Четыре сыра', desc: 'Моцарелла, горгонзола, пармезан, фета', weight: '470 г', price: '29', img: '', badge: null, slug: 'quattro-formaggi', page: 'pizza-quattro-formaggi.html' },
-            { name: 'Ветчина и грибы', desc: 'Томатный соус, моцарелла, ветчина, шампиньоны', weight: '480 г', price: '26', img: '', badge: null, slug: 'ham-mushrooms', page: 'pizza-ham-mushrooms.html' },
-            { name: 'Диабло', desc: 'Острый томатный соус, моцарелла, салями, халапеньо', weight: '480 г', price: '28', img: '', badge: 'Острое', slug: 'diavola', page: 'pizza-diavola.html' },
-            { name: 'Кальцоне', desc: 'Тесто, моцарелла, ветчина, шампиньоны, томатный соус', weight: '520 г', price: '30', img: '', badge: null, slug: 'calzone', page: 'pizza-calzone.html' },
-            { name: 'Маринара', desc: 'Томатный соус, чеснок, орегано, оливковое масло', weight: '420 г', price: '22', img: '', badge: null, slug: 'marinara', page: 'pizza-marinara.html' },
-            { name: 'Прошутто', desc: 'Томатный соус, моцарелла, прошутто, руккола', weight: '470 г', price: '32', img: '', badge: null, slug: 'prosciutto', page: 'pizza-prosciutto.html' },
-            { name: 'Вегетарианская', desc: 'Томатный соус, моцарелла, перец, цукини, грибы, оливки', weight: '480 г', price: '27', img: '', badge: null, slug: 'vegetarian', page: 'pizza-vegetarian.html' },
-            { name: 'Белая (бьянка)', desc: 'Сливочный соус, моцарелла, пармезан, чеснок', weight: '450 г', price: '28', img: '', badge: null, slug: 'bianca', page: 'pizza-bianca.html' },
-            { name: 'Мясная', desc: 'Томатный соус, моцарелла, говядина, бекон, пепперони', weight: '500 г', price: '30', img: '', badge: null, slug: 'meat', page: 'pizza-meat.html' },
-            { name: 'Тоскана', desc: 'Томатный соус, моцарелла, колбаски, розмарин', weight: '480 г', price: '29', img: '', badge: null, slug: 'toscana', page: 'pizza-toscana.html' },
-            { name: 'Фреш с лососем', desc: 'Сливочный соус, моцарелла, лосось, лимон', weight: '470 г', price: '34', img: '', badge: null, slug: 'salmon', page: 'pizza-salmon.html' },
-            { name: 'Трюфельная', desc: 'Сливочный соус, моцарелла, шампиньоны, трюфельное масло', weight: '470 г', price: '36', img: '', badge: null, slug: 'truffle', page: 'pizza-truffle.html' },
-            { name: 'Овощная на гриле', desc: 'Томатный соус, моцарелла, баклажан, цукини, перец', weight: '470 г', price: '27', img: '', badge: null, slug: 'grilled-veg', page: 'pizza-grilled-veg.html' },
-            { name: 'Песто', desc: 'Песто, моцарелла, черри, пармезан', weight: '450 г', price: '30', img: '', badge: null, slug: 'pesto', page: 'pizza-pesto.html' },
-            { name: 'Капричоза', desc: 'Томатный соус, моцарелла, ветчина, грибы, артишок', weight: '490 г', price: '29', img: '', badge: null, slug: 'capricciosa', page: 'pizza-capricciosa.html' },
-            { name: 'Картофель фри', desc: 'Хрустящий картофель фри с морской солью', weight: '150 г', price: '9', img: '', badge: null, slug: 'fri', page: 'extra-fri.html' },
-            { name: 'Сырные шарики', desc: 'Жареные сырные шарики в панировке', weight: '8 шт', price: '12', img: '', badge: null, slug: 'syrnye-shariki', page: 'extra-syrnye-shariki.html' },
-            { name: 'Куриные наггетсы', desc: 'Сочные куриные наггетсы', weight: '6 шт', price: '13', img: '', badge: null, slug: 'nuggets', page: 'extra-nuggets.html' },
-            { name: 'Чесночные дольки', desc: 'Дольки теста с чесночным маслом', weight: '4 шт', price: '10', img: '', badge: null, slug: 'dolki', page: 'extra-dolki.html' },
-        ];
+        (function() {
+            const pizzas = [
+                { name: 'Маргарита', desc: 'Томатный соус, моцарелла, базилик, пармезан', weight: '450 г', price: '25', img: '', badge: null, page: 'pizza-margarita.html' },
+                { name: 'Пепперони', desc: 'Томатный соус, моцарелла, пепперони, орегано', weight: '480 г', price: '27', img: '', badge: 'Хит', page: 'pizza-pepperoni.html' },
+                { name: 'Четыре сыра', desc: 'Моцарелла, горгонзола, пармезан, фета', weight: '470 г', price: '29', img: '', badge: null, page: 'pizza-quattro-formaggi.html' },
+                { name: 'Ветчина и грибы', desc: 'Томатный соус, моцарелла, ветчина, шампиньоны', weight: '480 г', price: '26', img: '', badge: null, page: 'pizza-ham-mushrooms.html' },
+                { name: 'Диабло', desc: 'Острый томатный соус, моцарелла, салями, халапеньо', weight: '480 г', price: '28', img: '', badge: 'Острое', page: 'pizza-diavola.html' },
+                { name: 'Кальцоне', desc: 'Тесто, моцарелла, ветчина, шампиньоны, томатный соус', weight: '520 г', price: '30', img: '', badge: null, page: 'pizza-calzone.html' },
+                { name: 'Маринара', desc: 'Томатный соус, чеснок, орегано, оливковое масло', weight: '420 г', price: '22', img: '', badge: null, page: 'pizza-marinara.html' },
+                { name: 'Прошутто', desc: 'Томатный соус, моцарелла, прошутто, руккола', weight: '470 г', price: '32', img: '', badge: null, page: 'pizza-prosciutto.html' },
+                { name: 'Вегетарианская', desc: 'Томатный соус, моцарелла, перец, цукини, грибы, оливки', weight: '480 г', price: '27', img: '', badge: null, page: 'pizza-vegetarian.html' },
+                { name: 'Белая (бьянка)', desc: 'Сливочный соус, моцарелла, пармезан, чеснок', weight: '450 г', price: '28', img: '', badge: null, page: 'pizza-bianca.html' },
+                { name: 'Мясная', desc: 'Томатный соус, моцарелла, говядина, бекон, пепперони', weight: '500 г', price: '30', img: '', badge: null, page: 'pizza-meat.html' },
+                { name: 'Тоскана', desc: 'Томатный соус, моцарелла, колбаски, розмарин', weight: '480 г', price: '29', img: '', badge: null, page: 'pizza-toscana.html' },
+                { name: 'Фреш с лососем', desc: 'Сливочный соус, моцарелла, лосось, лимон', weight: '470 г', price: '34', img: '', badge: null, page: 'pizza-salmon.html' },
+                { name: 'Трюфельная', desc: 'Сливочный соус, моцарелла, шампиньоны, трюфельное масло', weight: '470 г', price: '36', img: '', badge: null, page: 'pizza-truffle.html' },
+                { name: 'Овощная на гриле', desc: 'Томатный соус, моцарелла, баклажан, цукини, перец', weight: '470 г', price: '27', img: '', badge: null, page: 'pizza-grilled-veg.html' },
+                { name: 'Песто', desc: 'Песто, моцарелла, черри, пармезан', weight: '450 г', price: '30', img: '', badge: null, page: 'pizza-pesto.html' },
+                { name: 'Капричоза', desc: 'Томатный соус, моцарелла, ветчина, грибы, артишок', weight: '490 г', price: '29', img: '', badge: null, page: 'pizza-capricciosa.html' },
+                { name: 'Картофель фри', desc: 'Хрустящий картофель фри с морской солью', weight: '150 г', price: '9', img: '', badge: null, page: 'extra-fri.html' },
+                { name: 'Сырные шарики', desc: 'Жареные сырные шарики в панировке', weight: '8 шт', price: '12', img: '', badge: null, page: 'extra-syrnye-shariki.html' },
+                { name: 'Куриные наггетсы', desc: 'Сочные куриные наггетсы', weight: '6 шт', price: '13', img: '', badge: null, page: 'extra-nuggets.html' },
+                { name: 'Чесночные дольки', desc: 'Дольки теста с чесночным маслом', weight: '4 шт', price: '10', img: '', badge: null, page: 'extra-dolki.html' }
+            ];
 
-        const grid = document.getElementById('pizzaGrid');
-        pizzas.forEach(p => {
-            const card = document.createElement('div');
-            card.className = 'pizza-card';
-                                    card.innerHTML = `
-                <div class="pizza-image">
-                    ${p.badge ? `<div class="badge">${p.badge}</div>` : ''}
-                    ${p.img ? `<img src="${p.img}" alt="${p.name}">` : `<div class="pizza-ph">🍕</div>`}
-                </div>
-                <div class="pizza-body">
-                    <div class="pizza-name">${p.name}</div>
-                    <div class="pizza-desc">${p.desc}</div>
-                    <div class="pizza-weight">${p.weight}</div>
-                    <div class="pizza-footer">
-                        <div class="pizza-price">${p.price} <small>BYN</small></div>
-                        <button class="btn-order">Заказать</button>
+            const grid = document.getElementById('pizzaGrid');
+            pizzas.forEach(function(p) {
+                const card = document.createElement('div');
+                card.className = 'pizza-card';
+                card.innerHTML = `
+                    <div class="pizza-image">
+                        ${p.badge ? `<div class="badge">${p.badge}</div>` : ''}
+                        ${p.img ? `<img src="${p.img}" alt="${p.name}">` : `<div class="pizza-ph">🍕</div>`}
                     </div>
-                </div>
-            `;
-            card.querySelector('.btn-order').addEventListener('click', (e) => {
-                e.stopPropagation();
-                alert(`🍕 ${p.name} добавлена в корзину!`);
+                    <div class="pizza-body">
+                        <div class="pizza-name">${p.name}</div>
+                        <div class="pizza-desc">${p.desc}</div>
+                        <div class="pizza-weight">${p.weight}</div>
+                        <div class="pizza-footer">
+                            <div class="pizza-price">${p.price} <small>BYN</small></div>
+                            <button class="btn-order">Заказать</button>
+                        </div>
+                    </div>
+                `;
+                card.querySelector('.btn-order').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    alert('🍕 ' + p.name + ' добавлена в корзину!');
+                });
+                card.addEventListener('click', function() {
+                    window.location.href = p.page;
+                });
+                grid.appendChild(card);
             });
-            card.addEventListener('click', () => {
+        })();
 
-                window.location.href = p.page;
-
-            });
-
-            grid.appendChild(card);
-        });
-    </script>
-    <script>
-        (function () {
+        (function() {
             var slides = document.querySelectorAll('.hero-slider .hero-slide');
             if (slides.length > 1) {
                 var i = 0;
-                setInterval(function () {
+                setInterval(function() {
                     slides[i].classList.remove('active');
                     i = (i + 1) % slides.length;
                     slides[i].classList.add('active');
