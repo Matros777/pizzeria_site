@@ -263,13 +263,25 @@
             border: 1px solid rgba(255,255,255,0.07);
             background: #0f0b08;
         }
-        .hero-img {
+        .hero-slider {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .hero-slide {
             position: absolute;
             inset: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .hero-slide.active {
+            opacity: 1;
         }
         .hero-overlay {
             position: absolute;
@@ -778,7 +790,11 @@
 
         <!-- HERO -->
         <section class="hero">
-            <img src="images/BVCUP.jpg" alt="Pizza Luxe" class="hero-img">
+            <div class="hero-slider">
+                <img src="images/pizza1.jpg" class="hero-slide active" alt="Pizza Luxe">
+                <img src="images/pizza2.jpg" class="hero-slide" alt="Pizza Luxe">
+                <img src="images/pizza3.jpg" class="hero-slide" alt="Pizza Luxe">
+            </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="hero-badge"><i class="fas fa-fire"></i> Из дровяной печи</div>
@@ -960,6 +976,19 @@
 
             grid.appendChild(card);
         });
+    </script>
+    <script>
+        (function () {
+            var slides = document.querySelectorAll('.hero-slider .hero-slide');
+            if (slides.length > 1) {
+                var i = 0;
+                setInterval(function () {
+                    slides[i].classList.remove('active');
+                    i = (i + 1) % slides.length;
+                    slides[i].classList.add('active');
+                }, 3000);
+            }
+        })();
     </script>
 </body>
 </html>
