@@ -12,25 +12,24 @@
     <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png" />
     <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#0a0806" />
-    <meta name="description" content="Четыре сыра в Napoli из печи: Томатный соус, моцарелла, базилик, пармезан. Свежие ингредиенты, тонкое тесто, дровяная печь. Закажите с доставкой." />
+    <meta name="description" content="Четыре сыра в Napoli из печи: томаты протертые, сыр моцарелла, сыр дор-блю, сыр пармезан, базилик, орегано. Свежие ингредиенты, тонкое тесто, дровяная печь. Закажите с доставкой." />
     <link rel="canonical" href="https://pizzeria-site.ivanbenks7-e96.workers.dev/pizza-quattro-formaggi.html" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Четыре сыра — Napoli из печи" />
-    <meta property="og:description" content="Четыре сыра: Томатный соус, моцарелла, базилик, пармезан. Заказывайте в Napoli из печи." />
+    <meta property="og:description" content="Четыре сыра: томаты протертые, сыр моцарелла, сыр дор-блю, сыр пармезан, базилик, орегано. Заказывайте в Napoli из печи." />
     <meta property="og:url" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/pizza-quattro-formaggi.html" />
-    <meta property="og:image" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/android-chrome-512x512.png" />
+    <meta property="og:image" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/pizza-quattro-formaggi.html" />
     <meta property="og:site_name" content="Napoli из печи" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Четыре сыра — Napoli из печи" />
-    <meta name="twitter:description" content="Четыре сыра: Томатный соус, моцарелла, базилик, пармезан. Заказывайте в Napoli из печи." />
-    <meta name="twitter:image" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/android-chrome-512x512.png" />
+    <meta name="twitter:description" content="Четыре сыра: томаты протертые, сыр моцарелла, сыр дор-блю, сыр пармезан, базилик, орегано. Заказывайте в Napoli из печи." />
+    <meta name="twitter:image" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/pizza-quattro-formaggi.html" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:'Inter',sans-serif; background:#0a0806; color:#f5f0eb; min-height:100vh; overflow-x:hidden; position:relative; }
 
-        /* ===== BACKGROUND (matches main page) ===== */
         .bg-layer {
             position: fixed;
             inset: 0;
@@ -79,7 +78,8 @@
         .back-link { color:#f5a828; text-decoration:none; font-weight:600; }
         .back-link:hover { text-decoration:underline; }
         .detail { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-top:30px; }
-        .detail-ph { width:100%; height:360px; border-radius:18px; box-shadow:0 20px 60px rgba(0,0,0,0.5); background:linear-gradient(135deg,#2a1c10,#3a2412); display:flex; align-items:center; justify-content:center; font-size:120px; }
+        .detail-ph { width:100%; height:360px; border-radius:18px; box-shadow:0 20px 60px rgba(0,0,0,0.5); overflow:hidden; }
+        .detail-ph img { width:100%; height:100%; object-fit:cover; border-radius:18px; }
         .detail-name { font-size:42px; font-weight:800; margin-bottom:10px; }
         .detail-badge { display:inline-block; background:linear-gradient(135deg,#f5a828,#e8861a); color:#1a1208; font-weight:700; padding:5px 14px; border-radius:20px; font-size:13px; margin-bottom:14px; }
         .detail-desc { font-size:18px; line-height:1.6; color:#e8ddcf; margin-bottom:18px; }
@@ -116,17 +116,17 @@
         </header>
 
         <section class="detail">
-            <div class="detail-ph">🍕</div>
+            <div class="detail-ph"><img src="images/dwTfC.jpg" alt="Четыре сыра" style="width:100%;height:100%;object-fit:cover;border-radius:18px;"></div>
             <div>
                 
                 <h1 class="detail-name">Четыре сыра</h1>
-                <p class="detail-desc">Моцарелла, горгонзола, пармезан, фета</p>
+                <p class="detail-desc">томаты протертые, сыр моцарелла, сыр дор-блю, сыр пармезан, базилик, орегано</p>
                 <ul class="ingredients">
-                    <li>Моцарелла</li><li>горгонзола</li><li>пармезан</li><li>фета</li>
+                    <li>томаты протертые</li><li>сыр моцарелла</li><li>сыр дор-блю</li><li>сыр пармезан</li><li>базилик</li><li>орегано</li>
                 </ul>
                 <div class="price-row">
-                    <div class="price">29 BYN</div>
-                    <button class="btn-order" onclick="alert('🍕 Четыре сыра добавлена в корзину!')">Заказать</button>
+                    <div class="price">30 BYN</div>
+                    <button class="btn-order" onclick="alert('Добавлено в корзину!')">Заказать</button>
                 </div>
                 <a href="index.html#menu" class="back-link">← Вернуться в меню</a>
             </div>
