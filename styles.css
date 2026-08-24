@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PIZZA LUXE — Итальянская пиццерия</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#0a0806" />
 
-    <meta name="description" content="PIZZA LUXE — итальянская пиццерия. Аутентичные пиццы на тонком тесте, фирменные соусы и быстрая доставка. Закажите вкус Италии уже сегодня!" />
-    <link rel="canonical" href="https://pizzeria-site.ivanbenks7-e96.workers.dev/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="PIZZA LUXE — Итальянская пиццерия" />
-    <meta property="og:description" content="Настоящая итальянская пицца на тонком тесте с доставкой. Закажите вкус Италии в PIZZA LUXE." />
-    <meta property="og:url" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/" />
-    <meta property="og:image" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/android-chrome-512x512.png" />
-    <meta property="og:site_name" content="PIZZA LUXE" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PIZZA LUXE — Итальянская пиццерия" />
-    <meta name="twitter:description" content="Настоящая итальянская пицца на тонком тесте с доставкой." />
-    <meta name="twitter:image" content="https://pizzeria-site.ivanbenks7-e96.workers.dev/android-chrome-512x512.png" />
- 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
- 
-    <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
      
         body {
@@ -730,236 +699,35 @@
             .menu-grid { grid-template-columns: 1fr; }
         }
         .pizza-card { cursor: pointer; }
-</style>
-</head>
-<body>
-    <!-- BACKGROUND -->
-    <div class="bg-layer">
-        <div class="bg-gradient"></div>
-        <div class="glow-orb o1"></div>
-        <div class="glow-orb o2"></div>
-        <div class="glow-orb o3"></div>
-        <div class="noise"></div>
-        <div class="smoke">
-            <div class="smoke-cloud"></div>
-            <div class="smoke-cloud"></div>
-            <div class="smoke-cloud"></div>
-            <div class="smoke-cloud"></div>
-            <div class="smoke-cloud"></div>
-        </div>
-        <div class="sparks" id="sparks"></div>
-        <div class="vignette"></div>
-    </div>
 
-    <!-- ПАРАЛЛАКС -->
-    <div class="parallax-pizzas">
-        <img src="images/esTuR.jpg" alt="" class="parallax-pizza p1" data-speed="0.15">
-        <img src="images/e4xik.jpg" alt="" class="parallax-pizza p2" data-speed="0.25">
-        <img src="images/dwTfC.jpg" alt="" class="parallax-pizza p3" data-speed="0.18">
-    </div>
-
-    <div class="container">
-        <!-- HEADER -->
-        <header class="header">
-            <div class="logo">
-                <span class="logo-icon"><img src="logo.png" alt="PIZZA LUXE" width="40" height="40" /></span>
-                <div>
-                    <div class="logo-text">PIZZA LUXE</div>
-                    <div class="logo-sub">La Cucina Italiana</div>
-                </div>
-            </div>
-            <nav class="nav">
-                <a href="#menu">Меню</a>
-                <a href="#delivery">Доставка</a>
-                <a href="#reviews">Отзывы</a>
-                <a href="#" class="order-btn"><i class="fas fa-shopping-bag"></i> Заказать</a>
-            </nav>
-        </header>
-
-        <!-- HERO -->
-        <section class="hero">
-            <img src="images/BVCUP.jpg" alt="Pizza Luxe" class="hero-img">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <div class="hero-badge"><i class="fas fa-fire"></i> Из дровяной печи</div>
-                <h1>Настоящая <span>итальянская</span> пицца</h1>
-                <p>Тесто 24-часовой ферментации, томаты San Marzano, моцарелла di bufala и свежие ингредиенты — в каждом кусочке душа Италии.</p>
-                <a href="#menu" class="hero-btn"><i class="fas fa-utensils"></i> Смотреть меню</a>
-            </div>
-        </section>
-
-        <!-- PROMO -->
-        <div class="promo-row">
-            <div class="promo-card">
-                <h3><i class="fas fa-clock"></i> Быстрая доставка</h3>
-                <p>Служба доставки PIZZA LUXE подключается — скоро запустим. Следите за обновлениями!</p>
-                <a href="delivery.html" class="promo-link">подробнее <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="promo-card">
-                <h3><i class="fas fa-fire"></i> Дровяная печь</h3>
-                <p>Настоящий вкус Италии. Пицца из настоящей дровяной печи при 450°C.</p>
-                <a href="oven.html" class="promo-link">подробнее <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="promo-card">
-                <h3><i class="fas fa-leaf"></i> Свежие ингредиенты</h3>
-                <p>Только отборные продукты. Каждый день свежая доставка овощей и сыров.</p>
-                <a href="ingredients.html" class="promo-link">узнать больше <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <!-- MENU -->
-        <div id="menu">
-            <div class="section-header">
-                <h2>Наше <span>меню</span></h2>
-                <p>Свежие ингредиенты, ручная раскатка, идеальный край</p>
-            </div>
-            <div class="menu-grid" id="pizzaGrid"></div>
-        </div>
-
-        <!-- DELIVERY -->
-        <div class="delivery-block" id="delivery">
-            <div class="delivery-info">
-                <h2>Доставка</h2>
-                <p>Служба доставки PIZZA LUXE сейчас подключается. Мы готовим запуск — и совсем скоро вы сможете заказать горячую пиццу с доставкой на дом или в офис. Следите за обновлениями: сервис скоро заработает!</p>
-                <div class="delivery-meta">
-                    <div class="meta-item"><i class="fas fa-clock"></i> В процессе подключения</div>
-                    <div class="meta-item"><i class="fas fa-motorcycle"></i> Запуск скоро</div>
-                    <div class="meta-item"><i class="fas fa-coins"></i> Оплата при получении</div>
-                </div>
-            </div>
-            <div class="delivery-visual">
-                <img src="delivery.jpg" alt="Доставка">
-            </div>
-        </div>
-
-        <!-- REVIEWS -->
-        <div id="reviews">
-            <div class="section-header">
-                <h2>Отзывы <span>клиентов</span></h2>
-                <p>Что говорят о нас гости</p>
-            </div>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Заказываю периодически. Лучшая пицца в городе. Вкусная начинка, отличное тесто, всегда свежая и горячая. Доставка работает отменно — 30–40 минут.</div>
-                    <div class="review-author">Андрей Петров <span>· постоянный клиент</span></div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Отмечали день рождения дочки. Прекрасное место. Внимательные сотрудники, кухня понравилась всем. Детишки остались в восторге.</div>
-                    <div class="review-author">Татьяна <span>· семья</span></div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Отличное заведение. Музыка, интерьер, персонал — всё на высшем уровне. Заказ ждали минут 10. Абсолютно довольны.</div>
-                    <div class="review-author">Иван <span>· вечерний гость</span></div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Пепперони просто огонь! Сыр тянется, края хрустящие. Уже третий раз заказываем за две недели. Рекомендую всем друзьям.</div>
-                    <div class="review-author">Ольга К. <span>· постоянный клиент</span></div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Гавайская — мой фаворит. Ананас свежий, ветчина отличная. Привезли горячей, несмотря на то что живём далеко. Спасибо!</div>
-                    <div class="review-author">Дмитрий <span>· доставка</span></div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <div class="review-text">Диабло для любителей острого — идеально. Халапеньо настоящий, соус с перчинкой. Будем заказывать ещё.</div>
-                    <div class="review-author">Мария С. <span>· любитель острого</span></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- FOOTER + КОСТЁР -->
-        <div class="footer-wrap">
-            <div class="campfire">
-                <div class="flame f1"></div>
-                <div class="flame f2"></div>
-                <div class="flame f3"></div>
-                <div class="flame f4"></div>
-                <div class="ember"></div>
-                <div class="ember"></div>
-                <div class="ember"></div>
-            </div>
-            <footer class="footer">
-                <span>© 2026 PIZZA LUXE. Сделано с любовью к Италии.</span>
-                <div class="footer-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-telegram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </footer>
-        </div>
-    </div>
-
-    <script>
-        // Искры
-        const sparksContainer = document.getElementById('sparks');
-        for (let i = 0; i < 38; i++) {
-            const spark = document.createElement('div');
-            spark.className = 'spark';
-            spark.style.left = Math.random() * 100 + '%';
-            spark.style.bottom = (Math.random() * 20 - 5) + '%';
-            spark.style.setProperty('--tx', ((Math.random() - 0.5) * 180) + 'px');
-            spark.style.animationDuration = (4.5 + Math.random() * 7) + 's';
-            spark.style.animationDelay = (Math.random() * 10) + 's';
-            const size = 2.5 + Math.random() * 3.5;
-            spark.style.width = spark.style.height = size + 'px';
-            sparksContainer.appendChild(spark);
-        }
-
-        // Параллакс
-        const parallaxItems = document.querySelectorAll('.parallax-pizza');
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            parallaxItems.forEach(item => {
-                const speed = parseFloat(item.dataset.speed) || 0.2;
-                item.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.02}deg)`;
-            });
-        });
-
-        // Меню — актуальные фото + цены в BYN
-        const pizzas = [
-            { name: 'Маргарита', desc: 'Томатный соус, моцарелла, базилик, пармезан', price: '25', img: 'images/esTuR.jpg', badge: null, slug: 'margarita' },
-            { name: 'Пепперони', desc: 'Томатный соус, моцарелла, пепперони, орегано', price: '27', img: 'images/e4xik.jpg', badge: 'Хит', slug: 'pepperoni' },
-            { name: 'Четыре сыра', desc: 'Моцарелла, горгонзола, пармезан, фета', price: '29', img: 'images/dwTfC.jpg', badge: null, slug: 'quattro-formaggi' },
-            { name: 'Ветчина и грибы', desc: 'Томатный соус, моцарелла, ветчина, шампиньоны', price: '26', img: 'images/o10pX.jpg', badge: null, slug: 'ham-mushrooms' },
-            { name: 'Диабло', desc: 'Острый томатный соус, моцарелла, салями, халапеньо', price: '28', img: 'images/ISDUN.jpg', badge: 'Острое', slug: 'diavola' },
-            { name: 'Гавайская', desc: 'Томатный соус, моцарелла, ананас, ветчина', price: '27', img: 'images/lT0yk.jpg', badge: null, slug: 'hawaiian' },
-        ];
-
-        const grid = document.getElementById('pizzaGrid');
-        pizzas.forEach(p => {
-            const card = document.createElement('div');
-            card.className = 'pizza-card';
-            card.innerHTML = `
-                <div class="pizza-image">
-                    ${p.badge ? `<div class="badge">${p.badge}</div>` : ''}
-                    <img src="${p.img}" alt="${p.name}">
-                </div>
-                <div class="pizza-body">
-                    <div class="pizza-name">${p.name}</div>
-                    <div class="pizza-desc">${p.desc}</div>
-                    <div class="pizza-footer">
-                        <div class="pizza-price">${p.price} <small>BYN</small></div>
-                        <button class="btn-order">Заказать</button>
-                    </div>
-                </div>
-            `;
-            card.querySelector('.btn-order').addEventListener('click', (e) => {
-                e.stopPropagation();
-                alert(`🍕 ${p.name} добавлена в корзину!`);
-            });
-            card.addEventListener('click', () => {
-
-                window.location.href = `pizza-${p.slug}.html`;
-
-            });
-
-            grid.appendChild(card);
-        });
-    </script>
-</body>
-</html>
+/* Detail-page layout (ingredients / oven / delivery) — matches site cards */
+.pizza-detail {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 18px;
+  padding: 28px 24px;
+  margin-top: 28px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+.pizza-detail img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+.pizza-info { flex: 1; }
+.pizza-info p {
+  font-size: 1.06rem;
+  line-height: 1.75;
+  color: #f5f0eb;
+  margin-bottom: 18px;
+}
+.pizza-info .btn { background: #e63946; color: #fff; }
+@media (max-width: 768px) {
+  .pizza-detail { flex-direction: column; }
+  .pizza-detail img { width: 100%; height: auto; }
+}

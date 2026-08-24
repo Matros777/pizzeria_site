@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pizzeria-site.ivanbenks7-e96.workers.dev/sitemap.xml
