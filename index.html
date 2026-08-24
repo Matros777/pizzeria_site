@@ -168,15 +168,7 @@
         }
 
         /* HEADER */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(245, 200, 66, 0.1);
-            flex-wrap: wrap;
-            gap: 16px;
-        }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; }
         .logo {
             display: flex;
             align-items: center;
@@ -731,7 +723,7 @@
             .parallax-pizza { opacity: 0.1 !important; }
         }
         @media (max-width: 768px) {
-            .header { flex-direction: column; align-items: flex-start; }
+            .header { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; }
             .nav { flex-wrap: wrap; gap: 14px; width: 100%; }
             .parallax-pizzas { display: none; }
         }
