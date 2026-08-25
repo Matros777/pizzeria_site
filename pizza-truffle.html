@@ -70,7 +70,9 @@
             mix-blend-mode: overlay;
         }
 
-        .container { max-width:1100px; margin:0 auto; padding:0 24px 60px; position:relative; z-index:1; }
+        .container { max-width:1100px; margin:0 auto; padding:0 24px 60px; position:relative; z-index:1;
+            min-height: 100vh;
+        }
         .header { display:flex; justify-content:space-between; align-items:center; padding:22px 0; }
         .logo { display:flex; align-items:center; gap:12px; }
         .logo img { width:44px; height:44px; object-fit:contain; filter:drop-shadow(0 0 12px rgba(245,200,66,0.4)); }
@@ -90,8 +92,75 @@
         .price { font-size:32px; font-weight:800; color:#f5a828; }
         .btn-order { background:linear-gradient(135deg,#f5a828,#e8861a); color:#1a1208; border:none; padding:14px 30px; border-radius:30px; font-weight:700; font-size:16px; cursor:pointer; }
         .btn-order:hover { transform:translateY(-2px); box-shadow:0 10px 26px rgba(245,168,40,0.4); }
-        .footer { text-align:center; padding:30px 0; color:#9c8a72; border-top:1px solid rgba(255,255,255,0.06); margin-top:50px; }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: rgba(245, 240, 235, 0.35);
+            font-size: 13px;
+            position: relative;
+            z-index: 2;
+        }
         @media (max-width:768px){ .detail{grid-template-columns:1fr;} .detail-name{font-size:32px;} }
+    
+        .footer-wrap {
+            position: sticky;
+            bottom: 0;
+            margin-top: 30px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .campfire {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 80px;
+            pointer-events: none;
+            opacity: 0.55;
+            z-index: 1;
+        }
+        .flame {
+            position: absolute;
+            bottom: 0;
+            border-radius: 50% 50% 20% 20%;
+            transform-origin: bottom center;
+            filter: blur(1px);
+        }
+        .flame.f1 { left: 42%; width: 18px; height: 42px; background: radial-gradient(ellipse at bottom, #ff9a2e 0%, #ff6b1a 40%, transparent 70%); animation: flameDance 1.8s ease-in-out infinite alternate; }
+        .flame.f2 { left: 50%; width: 22px; height: 52px; background: radial-gradient(ellipse at bottom, #ffb347 0%, #ff7b25 45%, transparent 75%); animation: flameDance 2.1s ease-in-out infinite alternate-reverse; animation-delay: 0.3s; }
+        .flame.f3 { left: 58%; width: 16px; height: 38px; background: radial-gradient(ellipse at bottom, #ff9a2e 0%, #e85d04 40%, transparent 70%); animation: flameDance 1.6s ease-in-out infinite alternate; animation-delay: 0.6s; }
+        .flame.f4 { left: 46%; width: 12px; height: 28px; background: radial-gradient(ellipse at bottom, #ffcc66 0%, #ff8c1a 50%, transparent 80%); animation: flameDance 2.4s ease-in-out infinite alternate-reverse; animation-delay: 0.2s; opacity: 0.7; }
+        .ember {
+            position: absolute;
+            bottom: 8px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #ff9a2e;
+            box-shadow: 0 0 6px 2px rgba(255, 140, 30, 0.6);
+            animation: emberRise 3s ease-out infinite;
+            opacity: 0;
+        }
+        .ember:nth-child(5) { left: 45%; animation-delay: 0s; }
+        .ember:nth-child(6) { left: 52%; animation-delay: 0.8s; }
+        .ember:nth-child(7) { left: 48%; animation-delay: 1.5s; }
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a { color: rgba(245, 240, 235, 0.35); font-size: 18px; transition: color 0.3s; }
+        .footer-links a:hover { color: #f5c842; }
+        @keyframes flameDance {
+            0%   { transform: scaleY(1) scaleX(1) rotate(-2deg); opacity: 0.85; }
+            50%  { transform: scaleY(1.15) scaleX(0.9) rotate(1deg); opacity: 1; }
+            100% { transform: scaleY(0.95) scaleX(1.05) rotate(3deg); opacity: 0.8; }
+        }
+        @keyframes emberRise {
+            0%   { transform: translateY(0) scale(1); opacity: 0; }
+            15%  { opacity: 0.8; }
+            100% { transform: translateY(-55px) scale(0.3); opacity: 0; }
+        }
+
     </style>
 </head>
 <body>
@@ -132,9 +201,25 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <span>© 2026 Napoli из печи. Сделано с любовью к Италии.</span>
-        </footer>
+        <div class="footer-wrap">
+            <div class="campfire">
+                <div class="flame f1"></div>
+                <div class="flame f2"></div>
+                <div class="flame f3"></div>
+                <div class="flame f4"></div>
+                <div class="ember"></div>
+                <div class="ember"></div>
+                <div class="ember"></div>
+            </div>
+            <footer class="footer">
+                <span>© 2026 Napoli из печи. Сделано с любовью к Италии.</span>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
