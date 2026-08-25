@@ -161,7 +161,14 @@
             100% { transform: translateY(-55px) scale(0.3); opacity: 0; }
         }
 
-    </style>
+    
+        /* unique pizza description + responsive placement */
+        .detail { grid-template-areas:"ph info" "about info"; }
+        .detail-ph { grid-area:ph; }
+        .detail > div:not(.detail-ph) { grid-area:info; }
+        .detail-about { grid-area:about; margin-top:18px; font-size:15px; line-height:1.65; color:rgba(245,240,235,0.85); max-width:560px; }
+        @media (max-width:768px){ .detail{grid-template-areas:"ph" "info" "about";} .detail-about{text-align:center;} }
+</style>
 </head>
 <body>
     <div class="bg-layer">
@@ -199,6 +206,7 @@
                 </div>
                 <a href="index.html#menu" class="back-link">← Вернуться в меню</a>
             </div>
+        <p class="detail-about">Бархатный сливочный соус с трюфельным маслом и шампиньонами. Утончённый вкус, который раскрывается в дровяной печи. Для тех, кто ищет что-то особенное.</p>
         </section>
 
                 <div class="flame f2"></div>
