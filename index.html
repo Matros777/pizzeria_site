@@ -665,7 +665,7 @@
         @media (max-width:560px){ .seo-about h3{font-size:20px;} }
 
         /* hero phone (elegant, readable over slider photos) */
-        .hero-phone { display:flex; width:fit-content; align-items:center; gap:9px; font-size:16px; font-weight:700; letter-spacing:0.4px; color:#f5f0eb; text-shadow:0 2px 10px rgba(0,0,0,0.75); margin-bottom:16px; text-decoration:none; }
+        .hero-phone { display:flex; width:fit-content; align-items:center; gap:9px; font-size:16px; font-weight:700; letter-spacing:0.4px; color:#f5f0eb; background:linear-gradient(90deg, #f5f0eb 0%, #f5f0eb 42%, #f5c842 50%, #f5f0eb 58%, #f5f0eb 100%); background-size:200% 100%; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 2px 10px rgba(0,0,0,0.75); margin-bottom:16px; text-decoration:none; animation:phoneShine 2s linear infinite; }
         .hero-phone i { font-size:14px; }
         .hero-phone:hover { color:#ffffff; }
 
@@ -675,8 +675,11 @@
         .seo-about a.social-inline { color:#f5c842; text-decoration:none; border-bottom:1px solid rgba(245,200,66,0.35); }
         .seo-about a.social-inline:hover { color:#ffe066; border-bottom-color:#ffe066; }
 
-        .seo-about .phone-highlight { color:#f5c842; font-weight:700; }
+        .seo-about .phone-highlight { color:#f5c842; font-weight:700; text-decoration:none; }
+
+        @keyframes phoneShine { 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
 </style>
+
 </head>
 <body>
 
@@ -769,7 +772,7 @@
 
         <section class="seo-about">
             <h3><span class="accent">Napoli пицца из печи</span> — Настоящая итальянская пиццерия в Минске</h3>
-            <p>Пицца в Napoli выпекается в дровяной печи: тесто 24-часовой ферментации, ручная раскатка и 450 °C дают тонкий хрустящий край и сочную начинку. Дополняют меню картофель фри, наггетсы, сырные шарики и картофельные дольки. Также мы варим превосходный ароматный бодрящий кофе! Работаем ежедневно с 11:00 до 22:00. Заказать пиццу в Минске: <span class="phone-highlight">+375 44 500-77-55</span>, на связи в <a href="https://wa.me/375445007755" target="_blank" rel="noopener" class="social-inline">WhatsApp</a>, <a href="https://t.me/Napoli_Brestskaya" target="_blank" rel="noopener" class="social-inline">Telegram</a> и <a href="https://www.instagram.com/napoli.wood_fired_pizza?igsi=MTBrbnpnZHBqdmlwMw==" target="_blank" rel="noopener" class="social-inline">Instagram</a>.</p>
+            <p>Пицца в Napoli выпекается в дровяной печи: тесто 24-часовой ферментации, ручная раскатка и 450 °C дают тонкий хрустящий край и сочную начинку. Дополняют меню картофель фри, наггетсы, сырные шарики и картофельные дольки. Также мы варим превосходный ароматный бодрящий кофе! Работаем ежедневно с 11:00 до 22:00. Заказать пиццу в Минске: <a class="phone-highlight" href="tel:+375445007755">+375 44 500-77-55</a>, на связи в <a href="https://wa.me/375445007755" target="_blank" rel="noopener" class="social-inline">WhatsApp</a>, <a href="https://t.me/Napoli_Brestskaya" target="_blank" rel="noopener" class="social-inline">Telegram</a> и <a href="https://www.instagram.com/napoli.wood_fired_pizza?igsi=MTBrbnpnZHBqdmlwMw==" target="_blank" rel="noopener" class="social-inline">Instagram</a>.</p>
         </section>
 
         <div class="delivery-block" id="delivery">
