@@ -916,7 +916,7 @@
                 `;
                 card.querySelector('.btn-order').addEventListener('click', function(e) {
                     e.stopPropagation();
-                    alert('🍕 ' + p.name + ' добавлена в корзину!');
+                    var ph=document.querySelector('.hero-phone'); if(ph){ph.scrollIntoView({behavior:'smooth',block:'center'});}else{window.scrollTo({top:0,behavior:'smooth'});}
                 });
                 card.addEventListener('click', function() {
                     window.location.href = p.page;
